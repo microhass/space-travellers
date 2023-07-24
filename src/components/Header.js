@@ -1,12 +1,12 @@
 import React from 'react';
-// import { Link, Outlet } from 'react-router-dom';
-// import Header from './styles/styledHeader';
-// import { NavLink } from 'react-router-dom';
-// import userImage from '../images/user.png';
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import StyledHeader from '../styles/styledHeader';
+import planetImage from '../images/planet.png';
+
 const links = [
   {
-    name: 'dragons',
-    href: '/dragons',
+    name: 'rockets',
+    href: '/rockets',
   },
   {
     name: 'missions',
@@ -17,34 +17,32 @@ const links = [
     href: '/profile',
   },
 ];
+
 const Header = () => (
   <>
-    <header>
-      <div>
-        {/* <Link to={'/'}>
-          <img src={userImage} alt='Logo' />
-          <h1>Space Travellers hub</h1>
-        </Link> */}
-      </div>
+    <StyledHeader>
       <nav>
-        <h1>Header content</h1>
-        <ul>
+        <div>
+          <Link to="/">
+            <img src={planetImage} alt="Logo" />
+            <h1>Space Travellers hub</h1>
+          </Link>
+        </div>
+        <ul className="links">
           {links.map((link) => (
             <li key={link.name}>
-              {/* <NavLink
+              <NavLink
                 to={link.href}
-                className={({ isActive }) =>
-                  isActive ? 'active' : ''
-                }
+                className={({ isActive }) => (isActive ? 'active' : '')}
               >
                 {link.name}
-              </NavLink> */}
+              </NavLink>
             </li>
           ))}
         </ul>
       </nav>
-    </header>
-    {/* <Outlet /> */}
+    </StyledHeader>
+    <Outlet />
   </>
 );
 export default Header;
