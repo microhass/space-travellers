@@ -24,7 +24,7 @@ const Missions = () => {
             <tr key={mission.id}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
-              <td> Member/Not a member</td>
+              {mission.reserved ? <td>Active member</td> : <td>Not a member</td>}
               <td>
                 <button
                   type="button"
@@ -34,9 +34,8 @@ const Missions = () => {
                       : dispatch(joinMission(mission.id))
                   )}
                 >
-                  Join Mission
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
                 </button>
-
               </td>
             </tr>
           ))}
