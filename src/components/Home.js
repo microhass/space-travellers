@@ -3,7 +3,7 @@ import Rocket from './rockets/Rocket';
 
 const Home = () => (
   <>
-    <Rocket></Rocket>
+    <Rocket />
   </>
 );
 

@@ -6,16 +6,16 @@ const Rocket = () => {
   const dispatch = useDispatch();
 
   const { rockets, isLoading } = useSelector(
-    (state) => state.rockets
+    (state) => state.rockets,
   );
 
   useEffect(() => {
     if (rockets?.length !== 0) return;
     dispatch(fetchRockets());
-  }, []);
+  }, [dispatch, rockets?.length]);
 
-  if (isLoading) return <div className='loading'>Loading...</div>;
-  
+  if (isLoading) return <div className="loading">Loading...</div>;
+
   return <section>Rocket</section>;
 };
 
