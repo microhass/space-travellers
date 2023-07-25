@@ -2,8 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v3/missions';
-export const FetchMissions = createAsyncThunk(
-  'Missions/FetchMissions',
+export const getMissionsData = createAsyncThunk(
+  'Missions/getMissionsData',
 
   async (_, thunkAPI) => {
     try {
@@ -26,10 +26,10 @@ const missionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(FetchMissions.pending, (state) => {
+      .addCase(getMissionsData.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(FetchMissions.fulfilled, (state, action) => {
+      .addCase(getMissionsData.fulfilled, (state, action) => {
         state.isLoading = false;
         const data = action.payload;
 
@@ -38,9 +38,9 @@ const missionsSlice = createSlice({
           name: item.mission_name,
           description: item.description,
         }));
-        state.missions = missions;
+        state.missionData = missions;
       })
-      .addCase(FetchMissions.rejected, (state) => {
+      .addCase(getMissionsData.rejected, (state) => {
         state.isLoading = false;
       });
   },
