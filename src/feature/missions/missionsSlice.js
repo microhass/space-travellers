@@ -1,32 +1,49 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const missionData = [
-  {
-    id: 1,
-    title: 'Mission 1',
-    description: 'mission1 is most useful',
+const url = 'https://api.spacexdata.com/v3/missions';
+export const FetchMissions = createAsyncThunk(
+  'Missions/FetchMissions',
+
+  async (_, thunkAPI) => {
+    try {
+      const resp = await axios(url);
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('Error fetching missions');
+    }
   },
-  {
-    id: 2,
-    title: 'Mission 2',
-    description: 'mission1 is most useful',
-  },
-  {
-    id: 3,
-    title: 'Mission 3',
-    description: 'mission1 is most useful',
-  },
-];
+);
 
 const initialState = {
-  missionData,
-  isLoading: true,
+  missionData: [],
+  isLoading: false,
 };
 
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(FetchMissions.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(FetchMissions.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const data = action.payload;
+
+        const missions = data.map((item) => ({
+          id: item.mission_id,
+          name: item.mission_name,
+          description: item.description,
+        }));
+        state.missions = missions;
+      })
+      .addCase(FetchMissions.rejected, (state) => {
+        state.isLoading = false;
+      });
+  },
 });
 
 export default missionsSlice.reducer;
