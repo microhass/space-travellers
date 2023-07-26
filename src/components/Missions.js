@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissionsData } from '../feature/missions/missionsSlice';
+import { getMissionsData, joinMission, leaveMission } from '../feature/missions/missionsSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -24,8 +24,19 @@ const Missions = () => {
             <tr key={mission.id}>
               <td>{mission.name}</td>
               <td>{mission.description}</td>
-              <td> Member/Not a member</td>
-              <td> Join/Leave</td>
+              {mission.reserved ? <td>Active member</td> : <td>Not a member</td>}
+              <td>
+                <button
+                  type="button"
+                  onClick={() => (
+                    mission.reserved
+                      ? dispatch(leaveMission(mission.id))
+                      : dispatch(joinMission(mission.id))
+                  )}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
