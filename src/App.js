@@ -3,16 +3,20 @@
 import Header from './components/Header';
 import Home from './components/Home';
 import Missions from './components/Missions';
-// import Error from './components/Error';
+import Error from './components/Error';
 
 import './App.css';
 
 const App = () => (
-  <>
-    <Header />
-    <Missions />
-    <Home />
-  </>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Header />}>
+        <Route index element={<Home />} />
+        <Route path="/rockets" element={<Home />} />
+        <Route path="*" element={<Error />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;
