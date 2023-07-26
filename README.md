@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Todo List Project](#-todo-list-project)
+- [📖 Space Travelers Hub](#-space-travelers-hub)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -19,9 +19,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Todo List Project<a name="about-project"></a>
+# 📖 Space Travelers Hub<a name="about-project"></a>
 
-**A simple JavaScript application to create, manage & organize tasks as a todo list. It is implemented with the help of `webpack` and other libraries.**
+**This is a space website that makes use of the spacexdata api to fetch a list of rockets and missions then render them in the UI. It also adds capabilities of rocket reserving and joining a mission which is reflected in the profile page.**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -30,7 +30,7 @@
 > This project was built using the following technologies:
 
 <details>
-  <summary>HTML</summary>
+  <summary>React</summary>
   <ul>
     <li><a href="https://www.w3schools.com/html/" target="_blank">HTML</a></li>
   </ul>
@@ -54,9 +54,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new tasks: Enter the new task to be added to the list.**
-- **Mark tasks completed: Mark a task as completed when done.**
-- **Drag & drop functionality to organize tasks.**
+- **Fetch rockets and missions.**
+- **Mark rockets as reserved or missions as member.**
+- **Manage joined activities in the profile.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,13 +79,13 @@ To get get a local copy up and running, you can follow these simple steps:
 Clone the repository to your local machine using the following command:
 
 ```sh
-  git clone https://github.com/microhass/math-magicians.git
+  git clone https://github.com/microhass/space-travellers.git
 ```
 
 Navigate to the project directory:
 
 ```sh
- cd math-magicians
+ cd space-travellers
 ```
 
 Install the necessary dependencies by running:
@@ -102,7 +102,7 @@ Start the local dev server using the command:
 
 The website will be live at `localhost:3000/`. You can now make changes to the project as desired and push them back to the repository using Git.
 
-That's it! With these simple steps, you should be able to get up and running with the Math Magicians project in no time. Happy coding!
+That's it! With these simple steps, you should be able to get up and running with the Space Travellers project in no time. Happy coding!
 
 <!-- ### Run tests
 
@@ -129,6 +129,13 @@ Example command:
 - GitHub: [@hassanShakur](https://github.com/hassanShakur)
 - Twitter: [@hassShakur](https://twitter.com/hassShakur)
 - LinkedIn: [hassanShakur](https://www.linkedin.com/in/hassanShakur)
+
+
+👤 **Innocent Ndahimana**
+
+- GitHub: [@innocent](https://github.com/innocent)
+- Twitter: [@innocent](https://twitter.com/innocent)
+- LinkedIn: [@innocent](https://www.linkedin.com/in/innocent)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

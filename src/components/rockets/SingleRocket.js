@@ -52,18 +52,18 @@ const SingleRocket = ({ rocket }) => {
 };
 
 SingleRocket.propTypes = {
-  rocket: {
-    id: PropTypes.string,
+  rocket: PropTypes.shape({
+    id: PropTypes.number,
     name: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
     reserved: PropTypes.bool,
-  },
+  }),
 };
 
 SingleRocket.defaultProps = {
   rocket: {
-    id: '1',
+    id: 1,
     image: '',
     name: 'rocket',
     description: '',

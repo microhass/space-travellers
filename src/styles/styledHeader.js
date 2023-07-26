@@ -9,7 +9,6 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
 
   h1 {
     font-size: 1.4rem;
@@ -17,21 +16,18 @@ const Header = styled.header`
 
   img {
     width: 2rem;
+    margin-right: 1rem
   }
 
   nav {
     color: #007bff;
+  }
+
+  div,
+  div > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-
-    .links,
-    div > * {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
   }
 
   @media (min-width: 1000px) {
