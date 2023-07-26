@@ -26,15 +26,15 @@ const MyRocket = ({ rocket }) => {
 };
 
 MyRocket.propTypes = {
-  rocket: {
-    id: PropTypes.string,
+  rocket: PropTypes.shape({
+    id: PropTypes.number,
     name: PropTypes.string,
-  },
+  }),
 };
 
 MyRocket.defaultProps = {
   rocket: {
-    id: '1',
+    id: 1,
     name: 'rocket',
   },
 };
