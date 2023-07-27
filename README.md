@@ -116,9 +116,9 @@ Example command:
 
 👤 **Innocent Ndahimana**
 
-- GitHub: [@innocent](https://github.com/innocent)
-- Twitter: [@innocent](https://twitter.com/innocent)
-- LinkedIn: [@innocent](https://www.linkedin.com/in/innocent)
+- GitHub: [@innocent259](https://github.com/Innocent259)
+- Twitter: [@innocentndahimana](https://www.linkedin.com/in/innocent259/)
+- LinkedIn: [@innocentndahimana](https://twitter.com/ndahimana259)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
