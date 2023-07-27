@@ -1,83 +1,73 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import Rockets from '../components/rockets/Rocket';
+import SingleRocket from '../components/rockets/SingleRocket';
 import { rocketActions } from '../redux/rockets/rocketSlice';
+import '@testing-library/jest-dom/extend-expect';
 
-const mockStore = configureMockStore([thunk]);
+const mockStore = configureMockStore([]);
 
-describe('Rockets interactions', () => {
+describe('SingleRocket Component', () => {
   let store;
+  let mockRocket;
 
   beforeEach(() => {
-    store = mockStore({
-      rockets: {
-        rockets: [
-          {
-            id: 1,
-            name: 'Some Rocket',
-            image: 'img1',
-            reserved: false,
-            description: 'Lorem ipsum 1',
-          },
-          {
-            id: 2,
-            name: 'Some Other Rocket',
-            image: 'img2',
-            reserved: true,
-            description: 'Lorem ipsum 2',
-          },
-        ],
-        isLoading: false,
-      },
-    });
-  });
+    mockRocket = {
+      id: 123,
+      name: 'Test Rocket',
+      image: 'test-image-url',
+      description: 'Description of Test Rocket',
+      reserved: true,
+    };
 
-  it('shows loading while fetching data', () => {
-    store = mockStore({
-      rockets: {
-        rockets: [],
-        isLoading: true,
-      },
-    });
+    const initialState = {};
+    store = mockStore(initialState);
 
-    render(
-      <Provider store={store}>
-        <Rockets />
-      </Provider>,
-    );
-
-    const loadingTxt = screen.getByText('Loading...');
-    expect(loadingTxt).toBeInTheDocument();
-  });
-
-  it('should render fetched rockets correctly', async () => {
-    render(
-      <Provider store={store}>
-        <Rockets />
-      </Provider>,
-    );
-
-    const rocket2 = screen.getByText('Some Other Rocket');
-    expect(rocket2).toBeInTheDocument();
-  });
-
-  it('calls reserveRocket when the reserve button is clicked for an unreserved rocket', async () => {
     store.dispatch = jest.fn();
+  });
 
+  test('renders rocket data correctly', () => {
     render(
       <Provider store={store}>
-        <Rockets />
+        <SingleRocket rocket={mockRocket} />
       </Provider>,
     );
 
-    const reserveRocketBtn = screen.getByText('Reserve Rocket');
-    reserveRocketBtn.click();
+    const rocketName = screen.getByText(mockRocket.name);
+    expect(rocketName).toBeInTheDocument();
 
-    await waitFor(() => expect(store.dispatch).toHaveBeenCalledWith(
-      rocketActions.toggleRocketReservation('1'),
-    ));
+    const rocketDescription = screen.getByText(mockRocket.description);
+    expect(rocketDescription).toBeInTheDocument();
+
+    const reservedBadge = screen.getByText('Reserved');
+    expect(reservedBadge).toBeInTheDocument();
+
+    const rocketImage = screen.getByAltText(mockRocket.name);
+    expect(rocketImage).toHaveAttribute('src', mockRocket.image);
+  });
+
+  test('dispatches toggleRocketReservation action when clicking reservation buttons', () => {
+    render(
+      <Provider store={store}>
+        <SingleRocket rocket={mockRocket} />
+      </Provider>,
+    );
+
+    const cancelButton = screen.getByTitle('Cancel Reservation');
+    fireEvent.click(cancelButton);
+    expect(store.dispatch)
+      .toHaveBeenCalledWith(rocketActions.toggleRocketReservation(mockRocket.id));
+
+    mockRocket.reserved = false;
+    render(
+      <Provider store={store}>
+        <SingleRocket rocket={mockRocket} />
+      </Provider>,
+    );
+    const reserveButton = screen.getByTitle('Reserve Rocket');
+    fireEvent.click(reserveButton);
+    expect(store.dispatch)
+      .toHaveBeenCalledWith(rocketActions.toggleRocketReservation(mockRocket.id));
   });
 });
