@@ -12,7 +12,6 @@ const Profile = () => {
 
   return (
     <section className={classes.profile}>
-
       <div className="profile-missions">
         <h3 className={classes.title}>my missions</h3>
         <ul className={classes.list}>
