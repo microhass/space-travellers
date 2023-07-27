@@ -7,7 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
+  <!-- - [🚀 Live Demo ](#-live-demo-) -->
   - [💻 Getting Started ](#-getting-started-)
     - [Install](#install)
   - [👥 Authors ](#-authors-)
@@ -29,26 +29,9 @@
 
 > This project was built using the following technologies:
 
-<details>
-  <summary>React</summary>
-  <ul>
-    <li><a href="https://www.w3schools.com/html/" target="_blank">HTML</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>CSS</summary>
-  <ul>
-    <li><a href="https://www.w3schools.com/css/" target="_blank">CSSs</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Javascript</summary>
-  <ul>
-    <li><a href="https://www.w3schools.com/javascript/" target="_blank">Javascript</a></li>
-  </ul>
-</details>
+- React
+- Redux
+- CSS
 
 <!-- Features -->
 
@@ -62,9 +45,9 @@
 
 <!-- Live Demo -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href=""> See Project 🚀 Live link not ready yet ❌</a>
+<a href=""> See Project 🚀 Live link not ready yet ❌</a> -->
 
 <!-- GETTING STARTED -->
 
@@ -145,9 +128,8 @@ Example command:
 
 <!-- > Describe 1 - 3 features you will add to the project. -->
 
-- [ ] **Full calculator functionality.**
+- [ ] **Use React Bootstrap**
 - [ ] **Responsive design: The project will be optimized to display properly on different screen sizes, including desktops, tablets, and mobile devices.**
-- [ ] **JavaScript interactivity: Some interactive features will be added using JavaScript to enhance the user experience.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,7 +137,7 @@ Example command:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-If you'd like to contribute to this project, feel free to fork the repository and make changes as you see fit. Please submit a pull request with your changes and I'll review them as soon as possible.
+If you'd like to contribute to this project, feel free to fork the repository and make changes as you see fit. Please submit a pull request with your changes and We'll review them as soon as possible.
 
 Feel free to check the [issues page](../../issues/).
 
@@ -165,7 +147,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> I am excited to share with you my latest project on Github. As you know, Github is an essential tool for developers to showcase their skills, collaborate with others, and contribute to open-source projects. By supporting my project, you can help me improve my Github workflow skills and learn how to set up HTML & CSS linters.
+> We are excited to share with you my latest project on Github. As you know, Github is an essential tool for developers to showcase their skills, collaborate with others, and contribute to open-source projects. By supporting my project, you can help me improve us Github workflow skills and learn how to set up HTML & CSS linters.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,7 +155,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> I would like to thank the Microverse community for their support and guidance throughout this project. Special thanks to my peers and mentors for their constructive feedback and advice.
+> We would like to thank the Microverse community for their support and guidance throughout this project. Special thanks to our peers and mentors for their constructive feedback and advice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
