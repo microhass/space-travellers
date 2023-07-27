@@ -1,5 +1,13 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <br/>
+
+  <h3><b>Space Travellers</b></h3>
+
+</div>
+
+
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
@@ -87,17 +95,16 @@ The website will be live at `localhost:3000/`. You can now make changes to the p
 
 That's it! With these simple steps, you should be able to get up and running with the Space Travellers project in no time. Happy coding!
 
-<!-- ### Run tests
+### Run tests
 
 To run tests, run the following command: -->
 
-<!--
-Example command:
+
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm test
 ```
---->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,10 +166,11 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- FAQ (optional) -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
