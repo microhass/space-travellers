@@ -5,7 +5,6 @@ import configureMockStore from 'redux-mock-store';
 import Missions from '../components/missions/Missions';
 import '@testing-library/jest-dom/extend-expect';
 
-// Create a mock store
 const mockStore = configureMockStore([]);
 
 describe('Missions Component', () => {
@@ -13,7 +12,6 @@ describe('Missions Component', () => {
   let mockMissions;
 
   beforeEach(() => {
-    // Define mock missions data
     mockMissions = [
       {
         id: 1,
@@ -29,7 +27,6 @@ describe('Missions Component', () => {
       },
     ];
 
-    // Create a mock store with initial state
     const initialState = {
       missions: {
         missions: mockMissions,
@@ -38,7 +35,6 @@ describe('Missions Component', () => {
     };
     store = mockStore(initialState);
 
-    // Mock the fetchMissions action
     store.dispatch = jest.fn();
   });
 
@@ -49,13 +45,11 @@ describe('Missions Component', () => {
       </Provider>,
     );
 
-    // Check if mission names are rendered
     const mission1Name = screen.getByText('Mission 1');
     const mission2Name = screen.getByText('Mission 2');
     expect(mission1Name).toBeInTheDocument();
     expect(mission2Name).toBeInTheDocument();
 
-    // Check if mission descriptions are rendered
     const mission1Description = screen.getByText('Description of Mission 1');
     const mission2Description = screen.getByText('Description of Mission 2');
     expect(mission1Description).toBeInTheDocument();
@@ -63,7 +57,6 @@ describe('Missions Component', () => {
   });
 
   test('renders loading message when isLoading is true', () => {
-    // Set isLoading to true
     store.getState().missions.isLoading = true;
 
     render(
@@ -72,7 +65,6 @@ describe('Missions Component', () => {
       </Provider>,
     );
 
-    // Check if the loading message is rendered
     const loadingMessage = screen.getByText('Loading...');
     expect(loadingMessage).toBeInTheDocument();
   });

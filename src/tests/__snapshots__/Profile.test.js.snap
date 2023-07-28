@@ -6,6 +6,32 @@ exports[`Profile Component should render the profile page 1`] = `
     class="profile"
   >
     <div
+      class="profile-missions"
+    >
+      <h3
+        class="title"
+      >
+        my missions
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          <span>
+            Mission 2
+          </span>
+          <button
+            class="leave"
+            type="button"
+          >
+            leave mission
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
       class="profile-rockets"
     >
       <h3
@@ -40,32 +66,6 @@ exports[`Profile Component should render the profile page 1`] = `
             type="button"
           >
             cancel reservation
-          </button>
-        </li>
-      </ul>
-    </div>
-    <div
-      class="profile-missions"
-    >
-      <h3
-        class="title"
-      >
-        my missions
-      </h3>
-      <ul
-        class="list"
-      >
-        <li
-          class="item"
-        >
-          <span>
-            Mission 2
-          </span>
-          <button
-            class="leave"
-            type="button"
-          >
-            leave mission
           </button>
         </li>
       </ul>

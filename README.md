@@ -15,9 +15,10 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  <!-- - [🚀 Live Demo ](#-live-demo-) -->
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Install](#install)
+    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -51,11 +52,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Live Demo -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href=""> See Project 🚀 Live link not ready yet ❌</a> -->
+<a href="https://micro-space-travellers.netlify.app/"> See Project 🚀</a>
+
 
 <!-- GETTING STARTED -->
 
