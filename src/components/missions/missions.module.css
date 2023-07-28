@@ -1,0 +1,84 @@
+.missions {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1rem;
+  overflow-x: scroll;
+}
+
+.table {
+  background-color: #000;
+  min-width: 800px;
+}
+
+.tableRow > th,
+.tableRow > td {
+  padding: 5px;
+  background-color: #fff;
+}
+
+.description {
+  line-height: 1.4;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+.badge,
+.inactive {
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.badge {
+  background-color: #18a2b8;
+  text-transform: capitalize;
+}
+
+.inactive {
+  background-color: #6d757d;
+  text-transform: uppercase;
+}
+
+.button {
+  width: 15%;
+}
+
+.join,
+.leave {
+  border: 1px solid #000;
+  text-transform: capitalize;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.leave {
+  border-color: red;
+  color: red;
+}
+
+@media screen and (min-width: 1000px) {
+  .tableRow > th,
+  .tableRow > td {
+    padding: 10px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .badge,
+  .inactive {
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .join,
+  .leave {
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+}
